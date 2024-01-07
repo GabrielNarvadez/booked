@@ -2,401 +2,313 @@
 {% load static %}
 {% block content %}
 
-<!--Same as Home SAME AS HOME SAME AS HOME-->
-
-
-  <style media="screen">
-    body,
-html {
-  height: 100%;
-}
-
-.d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.align-center {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.flex-centerY-centerX {
-  justify-content: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-body {
-  background-color:#8c9eff;
-}
-
-.page-wrapper {
-  height: 100%;
-  display: table;
-}
-
-.page-wrapper .page-inner {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.el-wrapper {
-  width: 360px;
-  padding: 15px;
-  margin: 15px auto;
-  background-color: #fff;
-}
-
-@media (max-width: 991px) {
-  .el-wrapper {
-    width: 345px;
-  }
-}
-
-@media (max-width: 767px) {
-  .el-wrapper {
-    width: 290px;
-    margin: 30px auto;
-  }
-}
-
-.el-wrapper:hover .h-bg {
-  left: 0px;
-}
-
-.el-wrapper:hover .price {
-  left: 20px;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  color: #818181;
-}
-
-.el-wrapper:hover .add-to-cart {
-  left: 50%;
-}
-
-.el-wrapper:hover .img {
-  webkit-filter: blur(7px);
-  -o-filter: blur(7px);
-  -ms-filter: blur(7px);
-  filter: blur(7px);
-  filter: progid:DXImageTransform.Microsoft.Blur(pixelradius='7', shadowopacity='0.0');
-  opacity: 0.4;
-}
-
-.el-wrapper:hover .info-inner {
-  bottom: 155px;
-}
-
-.el-wrapper:hover .a-size {
-  -webkit-transition-delay: 300ms;
-  -o-transition-delay: 300ms;
-  transition-delay: 300ms;
-  bottom: 50px;
-  opacity: 1;
-}
-
-.el-wrapper .box-down {
-  width: 100%;
-  height: 60px;
-  position: relative;
-  overflow: hidden;
-}
-
-.el-wrapper .box-up {
-  width: 100%;
-  height: 300px;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-
-.el-wrapper .img {
-  padding: 20px 0;
-  -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
-  -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
-  -o-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
-  transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
-  /* ease-out */
-  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  /* ease-out */
-}
-
-.h-bg {
-  -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
-  -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
-  -o-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
-  transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
-  /* ease-out */
-  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  /* ease-out */
-  width: 660px;
-  height: 100%;
-  background-color: #3f96cd;
-  position: absolute;
-  left: -659px;
-}
-
-.h-bg .h-bg-inner {
-  width: 50%;
-  height: 100%;
-  background-color: #464646;
-}
-
-.info-inner {
-  -webkit-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
-  -moz-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
-  -o-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
-  transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
-  /* ease-out */
-  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  /* ease-out */
-  position: absolute;
-  width: 100%;
-  bottom: 25px;
-}
-
-.info-inner .p-name,
-.info-inner .p-company {
-  display: block;
-}
-
-.info-inner .p-name {
-  font-family: 'PT Sans', sans-serif;
-  font-size: 18px;
-  color: #252525;
-}
-
-.info-inner .p-company {
-  font-family: 'Lato', sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #FFE11B;
-}
-
-.a-size {
-  -webkit-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
-  -moz-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
-  -o-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
-  transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
-  /* ease-out */
-  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  /* ease-out */
-  position: absolute;
-  width: 100%;
-  bottom: -20px;
-  font-family: 'PT Sans', sans-serif;
-  color: #828282;
-  opacity: 0;
-}
-
-.a-size .size {
-  color: #252525;
-}
-
-.cart {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-}
-
-.cart .price {
-  -webkit-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
-  -moz-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
-  -o-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
-  transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
-  /* ease-out */
-  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  /* ease-out */
-  -webkit-transition-delay: 100ms;
-  -o-transition-delay: 100ms;
-  transition-delay: 100ms;
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 16px;
-  color: #252525;
-}
-
-.cart .add-to-cart {
-  -webkit-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
-  -moz-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
-  -o-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
-  transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
-  /* ease-out */
-  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
-  /* ease-out */
-  -webkit-transition-delay: 100ms;
-  -o-transition-delay: 100ms;
-  transition-delay: 100ms;
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 110%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.cart .add-to-cart .txt {
-  font-size: 12px;
-  color: #fff;
-  letter-spacing: 0.045em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-* {
-  box-sizing: border-box;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-  </style>
-
-
-
-
-  {%if products%}
-  <h3 style="text-align:center; color:yellow;">{{word}}</h3>
-  <br>
-  <!-- products data starttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt -->
-  <div class="row">
-
-      {% for p in products %}
-      <!-- card1 -->
-      <div class="column">
-      <div class="container page-wrapper" style="width: 450px;">
-        <div class="page-inner">
-          <div class="row">
-            <div class="el-wrapper">
-              <div class="box-up">
-                <img class="img" src="{% static p.product_image.url %}" alt="product pic" height="300px" width="300px">
-                <div class="img-info">
-                  <div class="info-inner">
-                    <span style="background-color:#08050a; color:yellow;" class="p-company">{{p.name}}</span>
-
-                  </div>
-                  <div class="a-size">{{p.description}}</div>
-                </div>
-              </div>
-
-              <div class="box-down">
-                <div class="h-bg">
-                  <div class="h-bg-inner"></div>
-                </div>
-
-                <a class="cart" href="{% url 'add-to-cart' p.id  %}">
-                  <span class="price">₹ {{p.price}}</span>
-                  <span class="add-to-cart">
-                    <span class="txt">Add in cart</span>
-                  </span>
-                </a>
-                <button class="addtocart">
-                  <div class="pretext">
-                    <i class="fas fa-cart-plus"></i> ADD TO CART
-                  </div>
-                  
-                  <div class="pretext done">
-                    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
-                  </div>
-                  
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-<!-- card1 end -->
-{% if forloop.counter|divisibleby:"3" %}
+<section class="home-slider">
+  <div class="tp-banner-container">
+    <div class="tp-banner-fix" >
+      <ul>
+        
+        <!-- Slider 1 -->
+        <li data-transition="random" data-slotamount="7"> <img src="../../static/images/slides/slide-7.jpg" data-bgposition="center top" alt="" />
+          <div class="overlay"></div>
+          <!-- Layer -->
+          <div class="tp-caption sft font-montserrat text-uppercase tp-resizeme rs-parallaxlevel-4" 
+                data-x="center" 
+                data-y="center" data-voffset="-50"
+                data-speed="700" 
+                data-start="1000" 
+                data-easing="easeOutBack"
+                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                data-captionhidden="on"
+                style="color: #fff; font-size: 120px; font-weight: bold; letter-spacing:-2px; "> GO your own way. </div>
+          
+          <!-- Layer -->
+          <div class="tp-caption sfb  font-montserrat text-center tp-resizeme rs-parallaxlevel-4" 
+                data-x="center" 
+                data-y="center" data-voffset="40" 
+                data-speed="700" 
+                data-start="1700" 
+                data-easing="easeOutBack"
+                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                data-captionhidden="on" 
+                style="color: #fff; font-size: 18px;">Where Every Page Tells a Story</div>
+          
+          <!-- Layer -->
+          <div class="tp-caption sfb tp-resizeme rs-parallaxlevel-4" 
+                data-x="center" 
+                data-y="center" data-voffset="120" 
+                data-speed="700" 
+                data-start="2400" 
+                data-easing="easeOutBack"
+                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                data-captionhidden="on"> <a href="#." class="btn btn-1">Shop Now</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="#" class="btn ">Discover</a> </div>
+        </li>
+        
+        <!-- Slider 2 -->
+        <li data-transition="fade" data-slotamount="7"> <img src="../../static/images/slides/slide-8.jpg" data-bgposition="center top" alt="" />
+          <div class="overlay"></div>
+          <!-- Layer -->
+          <div class="tp-caption sft tp-resizeme rs-parallaxlevel-5" 
+                data-x="center" 
+                data-y="120" 
+                data-speed="700" 
+                data-start="1700" 
+                data-easing="easeOutBack"
+                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                data-captionhidden="on"> <img src="../../static/images/logo-mountain.png" alt="" /> </div>
+          
+          <!-- Layer -->
+          <div class="tp-caption customin font-playfair tp-resizeme rs-parallaxlevel-4" 
+                data-x="center" 
+                data-y="center" data-voffset="-40" 
+                data-speed="720" 
+                data-start="2400" 
+                data-easing="easeOutBack"
+                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                data-captionhidden="on" 
+                style="color: #fff; font-size: 80px; font-style:italic;"> QuickCart Books </div>
+          
+          <!-- Layer -->
+          <div class="tp-caption sfb  font-playfair text-center tp-resizeme rs-parallaxlevel-4" 
+                data-x="center" 
+                data-y="center" data-voffset="40" 
+                data-speed="1500" 
+                data-start="3200" 
+                data-easing="easeOutBack"
+                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                data-captionhidden="on" 
+                style="color: #fff; font-size: 18px;  font-style:italic;"> Elevating Your Reading Experience, One Page at a Time</div>
+          
+          <!-- Layer -->
+          <div class="tp-caption sfb tp-resizeme rs-parallaxlevel-4" 
+                data-x="center" 
+                data-y="470" 
+                data-speed="700" 
+                data-start="4000" 
+                data-easing="easeOutBack"
+                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                data-captionhidden="on"> <a href="#." class="btn btn-1">Shop Now</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="#" class="btn ">Discover</a> </div>
+        </li>
+        
+        <!-- Slider 3 -->
+        <li data-transition="random" data-slotamount="7"> <img src="../../static/images/slides/slide-6.jpg" data-bgposition="center center" alt="" /> 
+          <!-- SLIDER LAYERS -->
+          <div class="tp-caption lfr tp-resizeme rs-parallaxlevel-4" 
+                data-x="right" 
+                data-y="top"
+                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+                data-speed="700" 
+                data-start="1000" 
+                data-easing="Back.easeOut" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                data-captionhidden="on"        
+                style="z-index: 1;"> <img src="../../static/images/slides/slide-9-1.png" alt=""> </div>
+          
+          <!-- Layer -->
+          <div class="tp-caption font-montserrat text-center text-uppercase sft tp-resizeme rs-parallaxlevel-4" 
+                data-x="left" 
+                data-y="center" data-voffset="-80" 
+                data-speed="700" 
+                data-start="1000" 
+                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+                data-easing="Back.easeOut" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                data-captionhidden="on"
+                style="color: #272727; font-size: 18px; font-weight: normal; letter-spacing: 3px; border-top:1px solid #272727; border-bottom:1px solid #272727; padding:20px 0;">Where Every Book<br>
+                Finds Its Perfect Reader </div>
+          
+          <!-- Layer -->
+          <div class="tp-caption sfb tp-resizeme rs-parallaxlevel-4" 
+                data-x="left" 
+                data-y="center" data-voffset="20" 
+                data-speed="700" 
+                data-start="1500"
+                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+                data-easing="Back.easeOut" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                data-captionhidden="on"
+                style="z-index: 10;"> <a href="#" class="btn btn-1">SHOP NOW</a> </div>
+        </li>
+      </ul>
     </div>
-    <div class="row">
-          <br><br><br><br><br>
-{% endif %}
+  </div>
+</section>
 
-  {% endfor %}
+<!-- CONTENT START -->
+<div class="content"> 
+  
+  <!--======= NEW COLLECRION =========-->
+  <section class="section-p-30px grid-collection">
+    <div class="container">
+      <ul class="row">
+        
+        <!-- ADD 1 -->
+        <li class="col-sm-4">
+          <div class="inn-sec animate fadeInLeft" data-wow-delay="0.6s"> <a href="#."> <img class="img-responsive" src="../../static/images/grid-bnr-img-1.jpg" alt="">
+            </a> </div>
+          
+          <!-- ADD 2 -->
+          <div class="inn-sec animate fadeInLeft" data-wow-delay="0.6s"> <a href="#."><img class="img-responsive" src="../../static/images/grid-bnr-img-2.jpg" alt="">
+            </a> </div>
+        </li>
+        
+        <!-- ADD 3 -->
+        <li class="col-sm-4 animate fadeInUp" data-wow-delay="0.6s">
+          <div class="inn-sec trd"> <a href="#."> <img class="img-responsive" src="../../static/images/grid-bnr-img-3.jpg" alt="">
+
+            </a> </div>
+        </li>
+        
+        <!-- ADD 1 -->
+        <li class="col-sm-4">
+          <div class="inn-sec animate fadeInRight" data-wow-delay="0.6s"> <a href="#."> <img class="img-responsive" src="../../static/images/grid-bnr-img-4.jpg" alt="">
+            </a> </div>
+          
+          <!-- ADD 2 -->
+          <div class="inn-sec last animate fadeInRight" data-wow-delay="0.6s"> <a href="#."><img class="img-responsive" src="../../static/images/grid-bnr-img-5.jpg" alt="">
+              <span> ALL PRODUCTS</span> </div>
+            </a> </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+<!--======= Services =========-->
+<section class="section-p-60px no-padding-t services">
+  <div class="container"> 
+    <!--  Tittle -->
+    <div class="tittle animate fadeInUp" data-wow-delay="0.4s">
+      <h5>MAIN BOOK GENRES</h5>
+      <p>Discover variety of books</p>
+    </div>
+    
+    <!--  Services -->
+    <ul class="row">
+      
+      <!--  Fashion Design -->
+      <li class="col-sm-3 animate fadeInLeft" data-wow-delay="0.4s">
+        <div class="icon"><i class="fa fa-anchor"></i></div>
+        <h6>KIDS STORY TIME</h6>
+        <hr>
+        <p class="font-montserrat">Explore vibrant tales, captivating illustrations, and stories that inspire the joy of discovery for children of all ages.</p>
+      </li>
+      
+      <!--  Fashion Design -->
+      <li class="col-sm-3 animate fadeInleft" data-wow-delay="0.6s">
+        <div class="icon"><i class="fa fa-headphones"></i></div>
+        <h6>MUSICAL BOOKS</h6>
+        <hr>
+        <p class="font-montserrat"> Explore vibrant tales, captivating illustrations, and stories that inspire the joy of discovery for children of all ages.</p>
+      </li>
+      
+      <!--  Fashion Design -->
+      <li class="col-sm-3 animate fadeInRight" data-wow-delay="0.4s">
+        <div class="icon"><i class="fa fa-paint-brush"></i></div>
+        <h6>DESIGN BOOKS</h6>
+        <hr>
+        <p class="font-montserrat">Whether you're a student, lifelong learner, or educator, embark on a journey of enlightenment with our thoughtfully chosen educational titles.</p>
+      </li>
+      
+      <!--  Fashion Design -->
+      <li class="col-sm-3 animate fadeInRight" data-wow-delay="0.6s">
+        <div class="icon"><i class="fa fa-leaf"></i></div>
+        <h6>EDUCATIONAL BBOOKS</h6>
+        <hr>
+        <p class="font-montserrat">Elevate your design sensibilities with our carefully curated selection of books that blend form and function.
+
+
+
+
+
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section-p-60px no-padding-b team">
+  <div class="container"> 
+    {%if products%}
+    <!-- TITTLE -->
+    <div class="tittle animate fadeInUp" data-wow-delay="0.4s">
+      <h5>PRODUCTS</h5>
+      <p>Explore Our Collection: Handpicked, Diverse, and Unforgettable Treasures Await You. </p>
+    </div>
+    <ul class="row">
+      
+      <!-- TEAM 1 -->
+      {% for p in products %}
+      <li class="col-md-4 animate fadeInUp" data-wow-delay="0.4s"> <img class="img-responsive"  src="{% static p.product_image.url %}" alt="" >
+        <h4>{{p.name}}</h4>
+        <h6>${{p.price}}</h6>
+        <p>{{p.description}}</p>
+        
+        <!--======= FOOTER ICONS =========-->
+        <a href="{% url 'add-to-cart' p.id  %}">
+        <button style="padding: 10px 20px; background-color: #3498db; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          ADD TO Cart
+        </button></a>
+      </li>
+      {% endfor %}
+      {% endif %}
+      
+
+    </ul>
+  
+    <ul class="row section-p-30px">
+
+      
+
+    </ul>
+  </div>
+</section>
 </div>
-<!-- products data enddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd -->
-
-
-{%else%}
-<h3 style="text-align:center; color:yellow;">No Search Found</h3>
-{%endif%}
-
-<script>
-    {%if messages %}
-    {%for message in messages%}
-    alert('{{message}}');
-    {%endfor%}
-    {%endif%}
-</script>
-<br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-<!--
-developed By : sumit kumar
-facebook : fb.com/sumit.luv
-youtube : youtube.com/lazycoders
--->
-
-
-
+</div>
+</section>
 {% endblock content %}
